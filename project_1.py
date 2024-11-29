@@ -2,9 +2,15 @@ import streamlit as st
 import random #to generate random numbers for our game
 import openai #to interact with openai
 import altair as alt #to create interactive bar chart for the stats part
+import dotenv 
+from dotenv import load_dotenv #to load the .env file
+import os
 
+
+load_dotenv() #to load the .env file
+
+api_key = os.getenv("OPENAI_API_KEY")
 # Seting up OpenAI key for our project
-api_key = "sk-svcacct-p5tbqGD9kG5T8cOTLFf6i-LusTXw9X4OBDRQnd4u02D9tBHoL364BkZS890Ne6ZT3BlbkFJdTeNdVE1t3jqwQ-kKZ4NQ66-F_8I8hcmZ-HJHWYeNCJtRDr7-pz1AvdTQlJziAA"
 openai.api_key = api_key
 model = "gpt-4o-mini"
 
